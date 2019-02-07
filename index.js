@@ -19,6 +19,16 @@ const root = {
             "lastName": "Saeed",
             "gender": "Male",
             "language": "English",
+            "emails": [{
+                    "email": "bilal@gmail.com"
+                },
+                {
+                    "email": "umair@gmail.com"
+                },
+                {
+                    "email": "waqas@gmail.com"
+                }
+            ]
         }
     }
 };
