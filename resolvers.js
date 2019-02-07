@@ -3,6 +3,7 @@ class Friend {
         firstName,
         lastName,
         gender,
+        age,
         language,
         email
     }) {
@@ -10,6 +11,7 @@ class Friend {
         this.firstName = firstName;
         this.lastName = lastName;
         this.gender = gender;
+        this.age = age;
         this.language = language;
         this.email = email;
     }
@@ -33,7 +35,7 @@ const resolvers = {
     }) => {
         let id = require('crypto').randomBytes(10).toString('hex');
         friendDatabase[id] = input;
-        console.log(`creating friend ${friendDatabase[id].firstName}`);
+        console.log(`creating friend ${friendDatabase[id].firstName} of age ${friendDatabase[id].age}`);
         return new Friend(id, input);
     }
 
