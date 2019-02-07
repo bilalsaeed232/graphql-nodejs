@@ -42,5 +42,21 @@ export const resolvers = {
                 })
             });
         },
+        updateFriend: (root, {
+            input
+        }) => {
+
+            return new Promise((resolve, object) => {
+                Friends.findOneAndUpdate({
+                    _id: input.id
+                }, input, {
+                    new: true
+                }, (err, friend) => {
+                    if (err) rejects(err);
+                    else resolve(friend);
+                });
+            });
+
+        }
     },
 };
