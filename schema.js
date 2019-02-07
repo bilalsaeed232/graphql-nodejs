@@ -13,7 +13,7 @@ const schema = buildSchema(`
     }
 
     type Query {
-        friend: Friend
+        getFriend(id: ID): Friend
         hello: String
     }
 
