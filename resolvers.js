@@ -23,25 +23,26 @@ class Friend {
 const friendDatabase = {};
 
 
-const resolvers = {
-    hello: () => "Hi, my name is Bilal..",
-    getFriend: ({
-        id
-    }) => {
-        console.log(typeof id);
-        console.dir(friendDatabase);
-        return new Friend(id, friendDatabase[id]);
+// resolver map
+export const resolvers = {
+    Query: {
+        hello: () => "Hi, my name is Bilal..",
+        getFriend: ({
+            id
+        }) => {
+            console.log(typeof id);
+            console.dir(friendDatabase);
+            return new Friend(id, friendDatabase[id]);
+        },
     },
-    createFriend: ({
-        input
-    }) => {
-        let id = require('crypto').randomBytes(10).toString('hex');
-        friendDatabase[id] = input;
-        console.log(`creating friend ${friendDatabase[id].firstName} of age ${friendDatabase[id].age}`);
-        return new Friend(id, input);
-    }
-
+    Mutation: {
+        createFriend: ({
+            input
+        }) => {
+            let id = require('crypto').randomBytes(10).toString('hex');
+            friendDatabase[id] = input;
+            console.log(`creating friend ${friendDatabase[id].firstName} of age ${friendDatabase[id].age}`);
+            return new Friend(id, input);
+        },
+    },
 };
-
-
-export default resolvers;
