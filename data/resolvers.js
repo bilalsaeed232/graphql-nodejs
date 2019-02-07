@@ -12,9 +12,12 @@ export const resolvers = {
         getFriend: (root, {
             id
         }) => {
-            console.log(typeof id);
-            console.dir(friendDatabase);
-            return new Friend(id, friendDatabase[id]);
+            return new Promise((resolve, object) => {
+                Friends.findById(id, (err, friend) => {
+                    if (err) rejects(err)
+                    else resolve(friend);
+                })
+            })
         },
     },
     Mutation: {
