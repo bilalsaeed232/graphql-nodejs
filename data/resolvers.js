@@ -57,6 +57,18 @@ export const resolvers = {
                 });
             });
 
+        },
+        deleteFriend: (root, {
+            id
+        }) => {
+            return new Promise((resolve, object) => {
+                Friends.remove({
+                    _id: id
+                }, (err) => {
+                    if (err) rejects(err);
+                    else resolve("Successfully delete Friend.");
+                })
+            })
         }
     },
 };
