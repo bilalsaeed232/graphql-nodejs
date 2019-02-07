@@ -1,0 +1,35 @@
+{
+  "name": "graphql-nodejs",
+  "version": "1.0.0",
+  "description": "For learning graphql with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bilalsaeed232/graphql-nodejs.git"
+  },
+  "keywords": [
+    "Graphql",
+    "nodejs"
+  ],
+  "author": "Bilal Saeed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bilalsaeed232/graphql-nodejs/issues"
+  },
+  "homepage": "https://github.com/bilalsaeed232/graphql-nodejs#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1"
+  }
+}
