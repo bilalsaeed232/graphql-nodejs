@@ -1,0 +1,26 @@
+{
+    "sqltools.connections": [
+        {
+            "askForPassword": false,
+            "connectionTimeout": 15,
+            "database": "graphql",
+            "dialect": "MySQL",
+            "name": "mongodblocal",
+            "password": "bilal232",
+            "port": 3306,
+            "server": "127.0.0.1",
+            "username": "bilal"
+        },
+        {
+            "askForPassword": false,
+            "connectionTimeout": 15,
+            "database": "graphql",
+            "dialect": "MySQL",
+            "name": "mongodd",
+            "password": "bilal232",
+            "port": 27107,
+            "server": "127.0.0.1",
+            "username": "bilal"
+        }
+    ]
+}

@@ -9,7 +9,7 @@ import {
 export const resolvers = {
     Query: {
         hello: () => "Hi, my name is Bilal..",
-        getFriend: ({
+        getFriend: (root, {
             id
         }) => {
             console.log(typeof id);
@@ -18,7 +18,7 @@ export const resolvers = {
         },
     },
     Mutation: {
-        createFriend: ({
+        createFriend: (root, {
             input
         }) => {
             const newFriend = new Friends({

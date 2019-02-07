@@ -40,37 +40,37 @@ const Friends = new mongoose.model('friends', friendsSchema);
 
 
 // SQL
-const sequelize = new Sequelize('database', null, null, {
-    dialect: 'sqlite',
-    storage: './aliens.sqlite',
-});
+// const sequelize = new Sequelize('database', null, null, {
+//     dialect: 'sqlite',
+//     storage: './aliens.sqlite',
+// });
 
-const Aliens = sequelize.define('aliens', {
-    firstName: {
-        type: Sequelize.STRING
-    },
-    lastName: {
-        type: Sequelize.STRING
-    },
-    planet: {
-        type: Sequelize.STRING
-    },
-});
+// const Aliens = sequelize.define('aliens', {
+//     firstName: {
+//         type: Sequelize.STRING
+//     },
+//     lastName: {
+//         type: Sequelize.STRING
+//     },
+//     planet: {
+//         type: Sequelize.STRING
+//     },
+// });
 
-Aliens.sync({
-    force: true
-}).then(() => {
-    _.times(10, (i) => {
-        Aliens.create({
-            firstName: casual._first_name,
-            lastName: casual._last_name,
-            planet: casual.word
-        });
-    });
-});
+// Aliens.sync({
+//     force: true
+// }).then(() => {
+//     _.times(10, (i) => {
+//         Aliens.create({
+//             firstName: casual._first_name,
+//             lastName: casual._last_name,
+//             planet: casual.word
+//         });
+//     });
+// });
 
 
 export {
     Friends,
-    Aliens
+    // Aliens
 };
