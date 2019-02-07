@@ -32,6 +32,13 @@ const typeDefs = `
         OTHER
     }
 
+    type Alien {
+        id: ID
+        firstName: String
+        lastName: String
+        planet: String
+    }
+
     type Query {
         getFriend(id: ID): Friend
         hello: String

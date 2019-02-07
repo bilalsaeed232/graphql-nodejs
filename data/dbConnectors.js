@@ -1,14 +1,14 @@
 import mongoose from 'mongoose';
-import {
-    Sequalize
-} from 'sequelize';
+import Sequelize from 'sequelize';
 import _ from 'lodash';
 import casual from 'casual';
 
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/friends', {
-    useMongoClient: true
+    //this option is no longer required
+    // useMongoClient: true
+    useNewUrlParser: true
 });
 
 
@@ -40,20 +40,20 @@ const Friends = new mongoose.model('friends', friendsSchema);
 
 
 // SQL
-const sequelize = new Sequalize('database', null, null, {
+const sequelize = new Sequelize('database', null, null, {
     dialect: 'sqlite',
     storage: './aliens.sqlite',
 });
 
 const Aliens = sequelize.define('aliens', {
     firstName: {
-        type: Sequalize.STRING
+        type: Sequelize.STRING
     },
     lastName: {
-        type: Sequalize.STRING
+        type: Sequelize.STRING
     },
     planet: {
-        type: Sequalize.STRING
+        type: Sequelize.STRING
     },
 });
 
